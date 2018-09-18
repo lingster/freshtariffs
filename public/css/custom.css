@@ -1,0 +1,41 @@
+ul.nav.navbar-nav
+{
+    margin-top: 42px;
+}
+
+header.site-header
+{
+    position: static;
+}
+
+main.site-main
+{
+    margin-top: 30px;
+}
+
+.navbar-nav a.dropdown-toggle
+{
+    background: none !important;
+    margin-bottom: 5px;
+}
+
+.btn-sm {
+    padding: 5px 10px;
+    font-size: 12px;
+    line-height: 1.5;
+    border-radius: 3px;
+}
+
+.a-link {
+    color: #337ab7;
+    text-decoration: none;
+    border-bottom: 1px dotted #337ab7;
+}
+
+.destination-select {
+    width: 300px;
+}
+
+#destination-select-container .select2-selection__choice {
+    display: none;
+}
