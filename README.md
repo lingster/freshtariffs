@@ -28,3 +28,55 @@ With FreshTariffs App You Can:
 - WebHooks 
 - FreshBooks API 
 - REST API 
+
+
+# Configuration
+
+- Edit app/config/app.php
+
+Set your app URL:
+
+
+	'url' => 'http://panel.freshtariffs.com',
+
+
+- Edit app/config/database.php
+
+	'mysql' => array(
+			'driver'    => 'mysql',
+			'host'      => 'localhost',
+			'database'  => 'Freshtariffs',
+			'username'  => 'root',
+			'password'  => 'DBPASSWORD',
+			'charset'   => 'utf8',
+			'collation' => 'utf8_unicode_ci',
+			'prefix'    => '',
+		),
+
+
+
+- Edit /app/config/services.php
+
+Enter Mailgun domain and secret key to be able to send emails:
+
+	'mailgun' => array(
+		'domain' => 'maildelivery.freshtariffs.com',
+		'secret' => 'key-12348757575757575775757575',
+	),
+
+	'mandrill' => array(
+		'secret' => '',
+	),
+  
+  
+  Enter Stripe Live Piblic key and Secret to redirect payments to your Stripe Account
+
+	'stripe' => array(
+		'model'  => 'User',
+        'public' => 'pk_live_fCDbVzSgw434pacbUt7H8ScBg',
+		'secret' => 'sk_live_Bswc0037837347474774',
+	),
+
+);
+
+
