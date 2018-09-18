@@ -1,25 +1,80 @@
-## Laravel PHP Framework
+# freshtariffs
+Rich OpenSource Telecom Rates Management &amp; API System written in Laravel Framework. for demo check www.freshtarrifs.com .
 
-[![Build Status](https://travis-ci.org/laravel/framework.svg)](https://travis-ci.org/laravel/framework)
-[![Total Downloads](https://poser.pugx.org/laravel/framework/downloads.svg)](https://packagist.org/packages/laravel/framework)
-[![Latest Stable Version](https://poser.pugx.org/laravel/framework/v/stable.svg)](https://packagist.org/packages/laravel/framework)
-[![Latest Unstable Version](https://poser.pugx.org/laravel/framework/v/unstable.svg)](https://packagist.org/packages/laravel/framework)
-[![License](https://poser.pugx.org/laravel/framework/license.svg)](https://packagist.org/packages/laravel/framework)
+With FreshTariffs App You Can:
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable, creative experience to be truly fulfilling. Laravel attempts to take the pain out of development by easing common tasks used in the majority of web projects, such as authentication, routing, sessions, and caching.
+- Add Customers
+- Add Price List Types (CLI, NCLI, TDM and others..)
+- Send Price List to customers from web interface
+- List Customers
+- Download Sent Pricelist History
+- Generate API key
+- Connect to Google Drive and Save Sheet once sent
+- Important Customers profiles from FreshBooks API
+- Set Price per prefix or country very quick
+- Admin Panel (Create Companies, Manage, Create Destinations Database, Add Custom Email Tenmplates and more..)
 
-Laravel aims to make the development process a pleasing one for the developer without sacrificing application functionality. Happy developers make the best code. To this end, we've attempted to combine the very best of what we have seen in other web frameworks, including frameworks implemented in other languages, such as Ruby on Rails, ASP.NET MVC, and Sinatra.
 
-Laravel is accessible, yet powerful, providing powerful tools needed for large, robust applications. A superb inversion of control container, expressive migration system, and tightly integrated unit testing support give you the tools you need to build any application with which you are tasked.
+# Demo Video of the app - Click on Image to watch
 
-## Official Documentation
+[![Audi R8](http://img.youtube.com/vi/g7PhBe46bVI/0.jpg)](https://www.youtube.com/watch?v=g7PhBe46bVI "FreshTariffs Demo")
 
-Documentation for the entire framework can be found on the [Laravel website](http://laravel.com/docs).
 
-### Contributing To Laravel
+# Integrations
 
-**All issues and pull requests should be filed on the [laravel/framework](http://github.com/laravel/framework) repository.**
+- Google Drive API
+- Stripe For Subscriptions
+- Mailgun for sending out emails and tracking delivery.
+- WebHooks 
+- FreshBooks API 
+- REST API 
 
-### License
 
-The Laravel framework is open-sourced software licensed under the [MIT license](http://opensource.org/licenses/MIT)
+# Configuration
+
+- Edit app/config/app.php
+
+Set your app URL:
+
+
+	'url' => 'http://panel.freshtariffs.com',
+
+
+- Edit app/config/database.php
+
+	'mysql' => array(
+			'driver'    => 'mysql',
+			'host'      => 'localhost',
+			'database'  => 'Freshtariffs',
+			'username'  => 'root',
+			'password'  => 'DBPASSWORD',
+			'charset'   => 'utf8',
+			'collation' => 'utf8_unicode_ci',
+			'prefix'    => '',
+		),
+
+
+
+- Edit /app/config/services.php
+
+Enter Mailgun domain and secret key to be able to send emails:
+
+	'mailgun' => array(
+		'domain' => 'maildelivery.freshtariffs.com',
+		'secret' => 'key-12348757575757575775757575',
+	),
+
+	'mandrill' => array(
+		'secret' => '',
+	),
+  
+  
+  Enter Stripe Live Piblic key and Secret to redirect payments to your Stripe Account
+
+	'stripe' => array(
+		'model'  => 'User',
+        'public' => 'pk_live_fCDbVzSgw434pacbUt7H8ScBg',
+		'secret' => 'sk_live_Bswc0037837347474774',
+	),
+
+);
