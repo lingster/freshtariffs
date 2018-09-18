@@ -1,4 +1,4 @@
-# freshtariffs
+# FreshTariffs
 Rich OpenSource Telecom Rates Management &amp; API System written in Laravel Framework. for demo check www.freshtarrifs.com .
 
 With FreshTariffs App You Can:
