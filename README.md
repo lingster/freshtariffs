@@ -1,5 +1,7 @@
 # freshtariffs
-Rich OpenSource Telecom Rates Management &amp; API System written in Laravel Framework. for demo check www.freshtarrifs.com
+Rich OpenSource Telecom Rates Management &amp; API System written in Laravel Framework. for demo check www.freshtarrifs.com .
+
+With FreshTariffs App You Can
 
 
 # Demo Video of the app - Click on Image to watch
@@ -10,6 +12,8 @@ Rich OpenSource Telecom Rates Management &amp; API System written in Laravel Fra
 # Integrations
 
 - Google Drive API
+- Stripe For Subscriptions
+- Mailgun for sending out emails and tracking delivery.
 - WebHooks 
 - FreshBooks API 
 - REST API 
